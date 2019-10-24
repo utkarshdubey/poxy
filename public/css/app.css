@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo&display=swap');
+
+html,body{
+    font-family: 'Chivo', sans-serif;
+}
+.wrapped {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.google{
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #38b2ac;
+    color: white;
+    padding: 25px;
+}
