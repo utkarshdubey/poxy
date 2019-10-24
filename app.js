@@ -100,7 +100,7 @@ app.post('/shorten', (req, res) => {
         req.flash('link_msg', link.new_link);
         return res.redirect('/');
     }
-    
+
     const options = {
       link: req.body.link,
       new_link: dockerNames.getRandomName(true),
@@ -123,7 +123,7 @@ app.get('/:id', (req, res) => {
       return res.redirect(link.link);
     }
     else{
-      return res.send('404');
+      return res.render('404');
     }
   })
 })
