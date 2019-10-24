@@ -22,3 +22,9 @@ html,body{
     color: white;
     padding: 25px;
 }
+
+.url{
+    background: #38b2ac;
+    color: white;
+    padding: 10px;
+}
