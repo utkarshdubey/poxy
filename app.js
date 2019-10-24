@@ -8,6 +8,10 @@ const app = express();
 const mongoose = require('mongoose');
 const session = require('express-session');
 const dockerNames = require('docker-names');
+const dotenv = require('dotenv');
+
+// Environment Variables for Credentials
+dotenv.config();
 
 // Additional Functions
 function validateUrl(value) {
@@ -54,7 +58,7 @@ app.use(methodOverride('_method'));
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose
-mongoose.connect("mongodb://admin:KeanuReeves1@ds036178.mlab.com:36178/link-shortener", {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true
   })
   .then(() => console.log('MongoDB Connected...'))
