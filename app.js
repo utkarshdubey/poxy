@@ -128,7 +128,8 @@ app.post('/shorten', (req, res) => {
 app.get('/:id', (req, res) => {
   Link.findOne({new_link: req.params.id}).exec(function(err, link){
     if(link){
-      return res.redirect(link.link);
+      res.set("location",link.link);
+      return res.status(301).send()
     }
     else{
       return res.render('404');
